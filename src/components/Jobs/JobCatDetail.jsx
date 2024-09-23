@@ -130,7 +130,7 @@ const JobCategoryDetail = () => {
         </div>
       </div>
     </section>
-    <section   className="p-20 w-3/4 bg-black text-white text-center mx-auto  mb-2 lg:mb-8 mt-16 pt-12 "><Footer /></section>
+    <section ><Footer /></section>
     </div>
   );
 };
