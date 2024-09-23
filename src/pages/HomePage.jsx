@@ -42,7 +42,7 @@ const HomePage = () => {
     <h2 className="text-4xl font-poppins mb-8">Why Choose GigConnect?</h2>
 
     {/* First card */}
-    <div className="relative mx-auto mb-8" style={{ width: '100%', height: '500px' }}>
+    <div className="relative mx-auto mb-8" style={{ width: '100%', height: '400px' }}>
         <img
             src={freelancer}
             alt="Find Gig"
@@ -61,7 +61,7 @@ const HomePage = () => {
     </div>
 
     {/* Second card */}
-    <div className="relative mx-auto" style={{ width: '100%', height: '500px' }}>
+    <div className="relative mx-auto" style={{ width: '100%', height: '400px' }}>
         <img
             src={client}
             alt="Post Jobs"
