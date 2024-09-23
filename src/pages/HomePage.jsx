@@ -90,7 +90,7 @@ const HomePage = () => {
     <input
       type="email"
       placeholder="Enter your email"
-      className="p-2 mb-2 sm:mb-0 rounded-md text-black w-full sm:w-64 lg:w-80" // Adjust input width for larger screens
+      className="p-2 mb-2 sm:mb-0 rounded-md text-black w-full sm:w-64 lg:w-100" // Adjust input width for larger screens
     />
     <button className="p-2 bg-white text-black rounded-md w-full sm:w-32 lg:w-48"> 
       Subscribe
