@@ -83,20 +83,21 @@ const HomePage = () => {
 
  
 </section>
-<section className="p-8 md:p-16 lg:p-22 lg-w-3/4 bg-[#5BC0BE] text-white text-center mx-auto mb-4 lg:mb-8 mt-8 lg:mt-16">
+<section className="max-w-6xl mx-auto p-8 md:p-16 lg:p-20 bg-[#5BC0BE] text-white text-center mb-4 lg:mb-8 mt-8 lg:mt-16">
   <h2 className="text-2xl md:text-3xl font-poppins mb-4 md:mb-6">Stay Updated!</h2>
   <p className="text-base md:text-lg mb-4">Subscribe to our newsletter to receive the latest job postings and platform updates.</p>
   <form className="flex flex-col sm:flex-row justify-center items-center">
     <input
       type="email"
       placeholder="Enter your email"
-      className="p-2 mb-2 sm:mb-0 rounded-md text-black w-full sm:w-auto sm:rounded-l-md sm:rounded-t-none"
+      className="p-2 mb-2 sm:mb-0 rounded-md text-black w-full sm:w-64 lg:w-80" // Adjust input width for larger screens
     />
-    <button className="p-2 bg-white text-black rounded-md w-full sm:w-auto sm:rounded-r-md sm:rounded-b-none">
+    <button className="p-2 bg-white text-black rounded-md w-full sm:w-32 lg:w-48"> 
       Subscribe
     </button>
   </form>
 </section>
+
 
 
         
