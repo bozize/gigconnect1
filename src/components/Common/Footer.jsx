@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
-      <div className="container mx-auto w-11/12 sm:w-3/4 md:w-2/3 text-center">
+      <div className="container mx-auto w-11/12 sm:w-full md:w-2/3 text-center">
         <p className="text-xs sm:text-sm md:text-base">&copy; 2024 GigConnect. All rights reserved.</p>
         <ul className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 mt-4">
           <li>
