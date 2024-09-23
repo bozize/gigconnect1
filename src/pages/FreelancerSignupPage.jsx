@@ -66,10 +66,7 @@ const FreelancerSignupPage = () => {
         </div>
         {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
         
-          
-        
-      </form>
-      <div className="flex justify-center py-2 px-2">
+        <div className="flex justify-center py-2 px-2">
         <button
           type="submit"
           disabled={loading}
@@ -78,6 +75,9 @@ const FreelancerSignupPage = () => {
           {loading ? 'Signing up...' : 'Signup'}
         </button>
         </div>
+        
+      </form>
+      
     </div>
   );
 };
