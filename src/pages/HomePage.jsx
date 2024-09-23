@@ -83,17 +83,19 @@ const HomePage = () => {
 
  
 </section>
-<section className="p-20 w-3/4 bg-[#5BC0BE] text-white text-center mx-auto  mb-2 lg:mb-8 mt-16 pt-12 ">
-
-
-
-  <h2 className="text-3xl font-poppins mb-6">Stay Updated!</h2>
-  <p className="text-lg mb-4">Subscribe to our newsletter to receive the latest job postings and platform updates.</p>
-  <form className="flex justify-center">
-    <input type="email" placeholder="Enter your email" className="p-2 rounded-l-md text-black" />
-    <button className="p-2 bg-white text-black rounded-r-md">Subscribe</button>
+<section className="relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px] p-5 sm:p-10 md:p-20 w-full sm:w-3/4 md:w-2/3 lg:w-3/4 bg-[#5BC0BE] text-white text-center mx-auto mb-2 sm:mb-4 lg:mb-8 mt-16 pt-12">
+  <h2 className="text-3xl md:text-4xl font-poppins mb-6">Stay Updated!</h2>
+  <p className="text-lg md:text-xl mb-4">Subscribe to our newsletter to receive the latest job postings and platform updates.</p>
+  <form className="flex flex-col sm:flex-row justify-center items-center">
+    <input
+      type="email"
+      placeholder="Enter your email"
+      className="p-2 rounded-l-md text-black mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto"
+    />
+    <button className="p-2 bg-white text-black rounded-md">Subscribe</button>
   </form>
 </section>
+
 
         
 
@@ -104,7 +106,7 @@ const HomePage = () => {
 
 
       
-<section   className="p-20 w-3/4 bg-black text-white text-center mx-auto  mb-2 lg:mb-8 mt-16 pt-12 "><Footer /></section>
+<section  ><Footer /></section>
     </div>
   );
 };
