@@ -83,7 +83,7 @@ const HomePage = () => {
 
  
 </section>
-<section className="p-20 w-3/4 bg-[#5BC0BE] text-white text-center mx-auto  mb-2 lg:mb-8 mt-16 pt-12 ">
+<section className="p-20 lg-w-3/4 bg-[#5BC0BE] text-white text-center mx-auto sm-w-full mb-2 lg:mb-8 mt-16 pt-12 ">
 
 
 
@@ -104,7 +104,7 @@ const HomePage = () => {
 
 
       
-<section   className="p-22 w-3/4  text-white text-center mx-auto mb-0 lg:mb-0 mt-2 pt-12 "><Footer /></section>
+<section   className="p-22 sm-w-full lg-w-3/4  text-white text-center mx-auto mb-0 lg:mb-0 mt-2 pt-12 "><Footer /></section>
     </div>
   );
 };
