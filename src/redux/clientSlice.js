@@ -8,7 +8,7 @@ export const fetchClientDataThunk = createAsyncThunk(
       const token = localStorage.getItem('accessToken');
       if (!token) throw new Error('No token found');
 
-      const response = await axios.get('http://127.0.0.1:8000/api/profile/client/', {
+      const response = await axios.get('https://gigconnects.onrender.com/api/profile/client/', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -31,7 +31,7 @@ export const updateClientProfileThunk = createAsyncThunk(
       console.log('Sending data to backend:', profileData); // Debug log
 
       const response = await axios.put(
-        'http://127.0.0.1:8000/api/profile/client/',
+        'https://gigconnects.onrender.com/api/profile/client/',
         profileData,
         {
           headers: {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api'; // Change this to your actual base URL if different
+const API_BASE_URL = 'https://gigconnects.onrender.com/api'; // Change this to your actual base URL if different
 
 // Job Categories API calls
 export const fetchJobCategories = async () => {
