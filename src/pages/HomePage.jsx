@@ -83,7 +83,7 @@ const HomePage = () => {
 
  
 </section>
-<section className="relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px] p-5 sm:p-10 md:p-20 w-full sm:w-3/4 md:w-2/3 lg:w-3/4 bg-[#5BC0BE] text-white text-center mx-auto mb-2 sm:mb-4 lg:mb-8 mt-16 pt-12">
+<section className="relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px] p-5 sm:p-10 md:p-20 w-full sm:w-full md:w-2/3 lg:w-3/4 bg-[#5BC0BE] text-white text-center mx-auto mb-2 sm:mb-4 lg:mb-8 mt-16 pt-12">
   <h2 className="text-3xl md:text-4xl font-poppins mb-6">Stay Updated!</h2>
   <p className="text-lg md:text-xl mb-4">Subscribe to our newsletter to receive the latest job postings and platform updates.</p>
   <form className="flex flex-col sm:flex-row justify-center items-center">
