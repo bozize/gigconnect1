@@ -104,7 +104,7 @@ const HomePage = () => {
 
 
       
-<section   className="p-22 sm-w-full lg-w-full  text-white text-center mx-auto mb-0 lg:mb-0 mt-2 pt-12 "><Footer /></section>
+<section><Footer /></section>
     </div>
   );
 };
