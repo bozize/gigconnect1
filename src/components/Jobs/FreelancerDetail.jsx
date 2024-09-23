@@ -12,7 +12,7 @@ const FreelancerProfile = () => {
   useEffect(() => {
     const fetchFreelancerProfile = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/freelancers/${id}/`);
+        const response = await axios.get(`https://gigconnects.onrender.com/api/freelancers/${id}/`);
         setFreelancer(response.data);
         setLoading(false);
       } catch (err) {

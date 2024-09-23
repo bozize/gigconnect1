@@ -25,7 +25,7 @@ export const userLogin = (credentials) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      'http://127.0.0.1:8000/api/login/',
+      'https://gigconnects.onrender.com/api/login/',
       credentials,
       config
     );
@@ -61,7 +61,7 @@ export const clientSignup = (credentials) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      'http://127.0.0.1:8000/api/signup/client/',
+      'https://gigconnects.onrender.com/api/signup/client/',
       credentials,
       config
     );
@@ -92,7 +92,7 @@ export const freelancerSignup = (credentials) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      'http://127.0.0.1:8000/api/signup/freelancer/',
+      'https://gigconnects.onrender.com/api/signup/freelancer/',
       credentials,
       config
     );

@@ -4,7 +4,7 @@ import axios from 'axios';
 export const fetchSkillsThunk = createAsyncThunk(
   'freelancer/fetchSkills',
   async () => {
-    const response = await axios.get('http://127.0.0.1:8000/api/skills/');
+    const response = await axios.get('https://gigconnects.onrender.com/api/skills/');
     return response.data;
   }
 );
@@ -20,7 +20,7 @@ export const filteredFreelancers = createAsyncThunk(
       return rejectWithValue('Valid category ID is required');
     }
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/freelancers/filtered/?category=${categoryId}`);
+      const response = await axios.get(`https://gigconnects.onrender.com/api/freelancers/filtered/?category=${categoryId}`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.error || 'Error occurred while fetching freelancers');
@@ -42,7 +42,7 @@ export const fetchFreelancerDataThunk = createAsyncThunk(
       const token = localStorage.getItem('accessToken');
       if (!token) throw new Error('No token found');
 
-      const response = await axios.get('http://127.0.0.1:8000/api/profile/freelancer/', {
+      const response = await axios.get('https://gigconnects.onrender.com/api/profile/freelancer/', {
         headers: {
           Authorization: `Bearer ${token}`, // Fixed syntax here
         },
@@ -51,7 +51,7 @@ export const fetchFreelancerDataThunk = createAsyncThunk(
       const freelancerData = response.data;
 
       // Fetch all skills
-      const skillsResponse = await axios.get('http://127.0.0.1:8000/api/skills/', {
+      const skillsResponse = await axios.get('https://gigconnects.onrender.com/api/skills/', {
         headers: {
           Authorization: `Bearer ${token}`, // Fixed syntax here
         },
@@ -69,7 +69,7 @@ export const fetchFreelancerDataThunk = createAsyncThunk(
       );
 
       // Fetch all job categories
-      const categoriesResponse = await axios.get('http://127.0.0.1:8000/api/categories/', {
+      const categoriesResponse = await axios.get('https://gigconnects.onrender.com/api/categories/', {
         headers: {
           Authorization: `Bearer ${token}`, // Fixed syntax here
         },
@@ -107,7 +107,7 @@ export const updateFreelancerProfile = createAsyncThunk(
       if (!token) throw new Error('No token found');
 
       const response = await axios.put(
-        'http://127.0.0.1:8000/api/profile/freelancer/',
+        'https://gigconnects.onrender.com/api/profile/freelancer/',
         profileData,
         {
           headers: {
@@ -131,7 +131,7 @@ export const updateFreelancerProfile = createAsyncThunk(
 export const fetchJobCategoriesThunk = createAsyncThunk(
   'freelancer/fetchJobCategories',
   async () => {
-    const response = await axios.get('http://127.0.0.1:8000/api/categories/');
+    const response = await axios.get('https://gigconnects.onrender.com/api/categories/');
     return response.data;
   }
 );

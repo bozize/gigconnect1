@@ -21,7 +21,7 @@ export const createJobThunk = createAsyncThunk(
       console.log('Sending job data:', jobData);
       console.log('Request config:', config);
 
-      const response = await axios.post('http://127.0.0.1:8000/api/jobs/', jobData, config);
+      const response = await axios.post('https://gigconnects.onrender.com/api/jobs/', jobData, config);
       console.log('Job created successfully:', response.data);
       return response.data;
     } catch (error) {
@@ -35,7 +35,7 @@ export const fetchJobsFiltered = createAsyncThunk(
   'jobs/fetchJobsFiltered',
   async (filters, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/jobsl/filtered/', { params: filters });
+      const response = await axios.get('https://gigconnects.onrender.com/api/jobsl/filtered/', { params: filters });
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
@@ -47,7 +47,7 @@ export const fetchJobDetails = createAsyncThunk(
   'jobs/fetchJobDetails',
   async (id, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/jobs/${id}/`);
+      const response = await axios.get(`https://gigconnects.onrender.com/api/jobs/${id}/`);
       console.log('Job details response:', response.data);
       return response.data;
     } catch (error) {
@@ -76,7 +76,7 @@ export const applyForJob = createAsyncThunk(
       };
 
       const response = await axios.post(
-        `http://127.0.0.1:8000/api/jobs/${jobId}/apply/`,
+        `https://gigconnects.onrender.com/api/jobs/${jobId}/apply/`,
         { cover_letter: coverLetter, proposed_pay: proposedPay, estimated_completion_time: estimatedCompletionTime },
         config
       );
@@ -92,7 +92,7 @@ export const fetchJobs = createAsyncThunk(
   'jobs/fetchJobs',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/jobsl/');
+      const response = await axios.get('https://gigconnects.onrender.com/api/jobsl/');
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
@@ -118,7 +118,7 @@ export const fetchClientJobs = createAsyncThunk(
           },
         };
   
-        const response = await axios.get('http://127.0.0.1:8000/api/client/jobs/', config);
+        const response = await axios.get('https://gigconnects.onrender.com/api/client/jobs/', config);
         return response.data;
       } catch (error) {
         return rejectWithValue(error.response?.data || error.message);
@@ -130,7 +130,7 @@ export const fetchClientJobs = createAsyncThunk(
     'jobs/fetchJobApplications',
     async (jobId, { rejectWithValue }) => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/jobs/${jobId}/applications/`);
+        const response = await axios.get(`https://gigconnects.onrender.com/api/jobs/${jobId}/applications/`);
         return response.data;
       } catch (error) {
         return rejectWithValue(error.response?.data || error.message);
@@ -157,7 +157,7 @@ export const fetchClientJobs = createAsyncThunk(
           },
         };
   
-        const response = await axios.get('http://127.0.0.1:8000/api/freelancer/applications/', config);
+        const response = await axios.get('https://gigconnects.onrender.com/api/freelancer/applications/', config);
         return response.data;
       } catch (error) {
         return rejectWithValue(error.response?.data || error.message);
