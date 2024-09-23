@@ -83,7 +83,7 @@ const HomePage = () => {
 
  
 </section>
-<section className="w-full max-w-screen-2xl mx-auto p-8 md:p-16 lg:p-20 bg-[#5BC0BE] text-white text-center mb-4 lg:mb-8 mt-8 lg:mt-16">
+<section className="w-3/4 max-w-screen-2xl mx-auto p-8 md:p-16 lg:p-20 bg-[#5BC0BE] text-white text-center mb-4 lg:mb-8 mt-8 lg:mt-16">
 
   <h2 className="text-2xl md:text-3xl font-poppins mb-4 md:mb-6">Stay Updated!</h2>
   <p className="text-base md:text-lg mb-4">Subscribe to our newsletter to receive the latest job postings and platform updates.</p>
