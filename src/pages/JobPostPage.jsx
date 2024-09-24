@@ -19,6 +19,7 @@ import { BriefcaseIcon, CurrencyDollarIcon, DocumentTextIcon, ClipboardDocumentI
 const JobPostPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const [jobData, setJobData] = useState({
     title: '',
     description: '',
@@ -36,6 +37,7 @@ const JobPostPage = () => {
   const skillError = useSelector(selectSkillError);
   const { createJobStatus, createJobError } = useSelector((state) => state.jobs || {});
 
+  // Fetch job categories and skills
   useEffect(() => {
     if (jobCategoriesStatus === 'idle' || jobCategories.length === 0) {
       dispatch(getJobCategories());
@@ -45,35 +47,47 @@ const JobPostPage = () => {
     }
   }, [jobCategoriesStatus, skillStatus, jobCategories.length, skills.length, dispatch]);
 
+  // Handle success or failure of job posting
   useEffect(() => {
     if (createJobStatus === 'succeeded') {
+      setJobData({
+        title: '',
+        description: '',
+        pay: '',
+        category: '',
+        required_skills: [],
+        level_of_expertise: '',
+      });
       navigate('/client-dashboard');
     } else if (createJobStatus === 'failed') {
       console.error('Failed to post job:', createJobError);
     }
   }, [createJobStatus, createJobError, navigate]);
 
+  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setJobData({ ...jobData, [name]: value });
   };
 
+  // Handle skill selection change
   const handleSkillChange = (skillId) => {
     setJobData((prevData) => {
       const isSkillSelected = prevData.required_skills.includes(skillId);
       const updatedSkills = isSkillSelected 
         ? prevData.required_skills.filter((id) => id !== skillId)
         : [...prevData.required_skills, skillId];
-      
       return { ...prevData, required_skills: updatedSkills };
     });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createJobThunk(jobData));
   };
 
+  // Display loading or error messages
   if (jobCategoriesStatus === 'loading' || skillStatus === 'loading') return <div>Loading...</div>;
   if (jobCategoriesError) return <div>Error loading job categories: {jobCategoriesError}</div>;
   if (skillError) return <div>Error loading skills: {skillError}</div>;
